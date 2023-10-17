@@ -7,7 +7,7 @@ I would like the install and configuration of nzyme be as easy as it's use. **Th
 
 ## Install nzyme with this wizard
 
-Use [the install script](./nzyme-install-wizard.sh) to help guide you through nzyme install process.
+Use [the install script](./nzyme-install-wizard.sh) to help guide you through the nzyme install process.
 
 > The goal of nzyme is to be accessible to as many people as possible by being easy to understand, no matter your level of experience.
 
