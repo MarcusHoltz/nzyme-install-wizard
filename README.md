@@ -38,7 +38,7 @@ Answer each prompt to generate the config.
 * * *
 
 
-##### nzyme install options
+#### Nzyme Install Options
 
 > There is help, re-running the script. 
 
