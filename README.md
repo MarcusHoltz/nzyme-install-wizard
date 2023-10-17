@@ -23,4 +23,46 @@ wget https://raw.githubusercontent.com/MarcusHoltz/nzyme-install-wizard/main/nzy
 * * *
 
 
+#### The installer is running
+
+When initialy running the installer, or reinstalling nzyme you should see a screen detailing instructions for the script:
+
+```bash
+**************************************************************************
+     Welcome to nzyme installer, please follow instructions below
+**************************************************************************
+Answer each prompt to generate the config.
+----------------------------------------------------
+```
+
+* * *
+
+
+##### nzyme install options
+
+> There is help, re-running the script. 
+
+Just re-run the install wizard for help or extra commands.
+
+
+```bash
+sudo bash nzyme-install-wizard.sh
+```
+
+You should see an output like below:
+
+```bash
+You've re-run this script.
+What do you want to do now that nzyme is installed?
+1) Reinstall nzyme.
+2) Uninstall nzyme.
+3) I am having trouble. Please setup the nzyme-fix-it-on-reboot script.
+4) Display what IP address nzyme is hosted at.
+5) Read the nzyme logs.
+6) Quit this laucher
+Please type one of the numbers above and hit enter:
+```
+
+* * *
+
 #### Thanks, good luck!
