@@ -17,7 +17,7 @@ Use [the install script](./nzyme-install-wizard.sh) to help guide you through th
 * * *
 
 ```bash
-wget https://raw.githubusercontent.com/MarcusHoltz/nzyme-install-wizard/main/nzyme-install-wizard.sh; chmod +x nzyme-install-wizard.sh; sudo bash nzyme-install-wizard.sh
+wget -O nzyme-install-wizard.sh https://raw.githubusercontent.com/MarcusHoltz/nzyme-install-wizard/main/nzyme-install-wizard.sh; chmod +x nzyme-install-wizard.sh; sudo bash nzyme-install-wizard.sh
 ```
 
 * * *
