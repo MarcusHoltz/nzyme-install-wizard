@@ -42,17 +42,22 @@ Answer each prompt to generate the config.
 
 > There is help, re-running the script. 
 
-Just re-run the install wizard for help or extra commands.
+Just re-run the install wizard below for more commands or help:
 
+
+* * *
 
 ```bash
 sudo bash nzyme-install-wizard.sh
 ```
 
-You should see an output like below:
+* * *
+
+
+You should see an output like this:
 
 ```bash
-You've re-run this script.
+Youve re-run this script.
 What do you want to do now that nzyme is installed?
 1) Reinstall nzyme.
 2) Uninstall nzyme.
