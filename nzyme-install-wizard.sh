@@ -43,7 +43,7 @@ export MY_WIFI=$(ip -br l | awk '$1 !~ "lo|vir|eth|ens|enp" { print $1}')
 if [ -f "/etc/nzyme/nzyme.conf" ]; then
     echo -e "You've re-run this script.\nWhat do you want to do now that nzyme is installed?"
     PS3='Please type one of the numbers above and hit enter: '
-    options=("Reinstall nzyme." "Uninstall nzyme." "I am having trouble. Please setup the nzyme-fix-it-on-reboot script." "Display what IP address nzyme is hosted at." "Read the nzyme logs." "Quit this launcher")
+    options=("Reinstall nzyme." "Uninstall nzyme." "I am having trouble. Please setup the nzyme-fix-it-on-reboot script." "Display what IP address nzyme is hosted at." "Read the nzyme logs." "Quit this laucher")
     select opt in "${options[@]}"
     do
         case $opt in
@@ -86,7 +86,7 @@ if [ -f "/etc/nzyme/nzyme.conf" ]; then
                 exit 0
             break
                 ;;
-            "Quit this launcher")
+            "Quit this laucher")
                 exit 0
             break
                 ;;
@@ -177,3 +177,4 @@ fi
 #######################################################
 echo -e "\nTest after reboot with: \ntail -n 200 /var/log/nzyme/nzyme.log"
 echo -e "\n######################################\n## Install complete, reboot needed  ##\n######################################"
+
