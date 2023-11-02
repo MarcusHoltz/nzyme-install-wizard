@@ -62,6 +62,10 @@ if [ -f "/etc/nzyme/nzyme.conf" ]; then
                 sudo rm -rf /etc/nzyme/* > /dev/null 2>&1
                 sudo rm /etc/apt/preferences.d/openjdk-pin /etc/apt/preferences.d/libpcap > /dev/null 2>&1
                 sudo -u postgres psql -c "DROP DATABASE nzyme WITH (FORCE);"  > /dev/null 2>&1
+                sudo -u postgres psql -c "DROP OWNED BY nzyme;" > /dev/null 2>&1
+                sudo -u postgres psql -c "REVOKE ALL PRIVILEGES ON ALL TABLES IN SCHEMA public FROM nzyme;" > /dev/null 2>&1
+                sudo -u postgres psql -c "REVOKE ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public FROM nzyme;" > /dev/null 2>&1
+                sudo -u postgres psql -c "REVOKE ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public FROM nzyme;" > /dev/null 2>&1
                 sudo -u postgres psql -c "DROP USER nzyme;" > /dev/null 2>&1
                 echo -e "\nUNINSTALL COMPLETE\nYou can re-run this script anytime to reinstall."
                 exit 0
