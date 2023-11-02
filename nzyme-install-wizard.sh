@@ -48,7 +48,7 @@ if [ -f "/etc/nzyme/nzyme.conf" ]; then
     do
         case $opt in
             "Reinstall nzyme.")
-                echo -e -n "\nOk then,\nREINSTALLING NZYME....";
+                echo -e -n "\nOk then,\RE-RUNNING INSTALL SCRIPT...";
                     for ((i=1; i<=18; i++)); do
                         echo -n "."
                         sleep 0.35
@@ -61,6 +61,8 @@ if [ -f "/etc/nzyme/nzyme.conf" ]; then
                 sudo apt remove -y nzyme postgresql libpcap0.8 openjdk-11-jre-headless > /dev/null 2>&1
                 sudo rm -rf /etc/nzyme/* > /dev/null 2>&1
                 sudo rm /etc/apt/preferences.d/openjdk-pin /etc/apt/preferences.d/libpcap > /dev/null 2>&1
+                sudo -u postgres psql -c "DROP DATABASE nzyme WITH (FORCE);"
+                sudo -u postgres psql -c "DROP USER [IF EXISTS] nzyme;"
                 echo -e "\nUNINSTALL COMPLETE\nYou can re-run this script anytime to reinstall."
                 exit 0
             break
