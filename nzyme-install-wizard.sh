@@ -165,7 +165,7 @@ main_function() {
     sudo sed -i "s/rest_listen_uri:.*/rest_listen_uri: \"http:\/\/$MY_IP:80\/\"/" /etc/nzyme/nzyme.conf
     sudo sed -i "s/http_external_uri:.*/http_external_uri: \"http:\/\/$MY_IP:80\/\"/" /etc/nzyme/nzyme.conf
     sudo sed -i "s/wlx00c0ca971201.*/$MY_WIFI/" /etc/nzyme/nzyme.conf
-    export MY_WIFI_CHANNELS=$(echo -e -n "[$(iwlist wlan0 channel | grep "Channel" | awk -F' ' '{print $2}' | tr '\n' ',' | sed 's/,$//')]")
+    export MY_WIFI_CHANNELS=$(echo -e -n "[$(iwlist wlan0 channel | grep "Channel" | awk -F' ' '{print $2}' | head -n -1 | tr '\n' ',' | sed 's/,$//')]")
     sudo sed -i "s/channels:.*/channels: $MY_WIFI_CHANNELS/" /etc/nzyme/nzyme.conf
 }
 ###
