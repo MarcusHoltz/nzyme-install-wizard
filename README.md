@@ -1,5 +1,9 @@
 # Nzyme Install Wizard
 
+![Last Commit](https://img.shields.io/github/last-commit/MarcusHoltz/nzyme-install-wizard)
+![Issues](https://img.shields.io/github/issues/MarcusHoltz/nzyme-install-wizard)
+![Forks](https://img.shields.io/github/forks/MarcusHoltz/nzyme-install-wizard)
+
 There are a few gotchas in the nzyme v1 [documentation](https://v1.nzyme.org/docs/intro) to get up and running. 
 
 I would like the install and configuration of nzyme be as easy as it's use. **This install script intends to fix that.**
